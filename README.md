@@ -8,21 +8,73 @@ This repository contains a BPF program designed to protect Minecraft servers fro
 
 ## Features
 
-- Monitors and counts incoming TCP and UDP packets.
-- Blocks IP addresses that exceed defined thresholds for packet counts.
-- Implements bot detection mechanisms.
-- Uses XDP for high-performance packet processing.
+- **IP Pattern Tracking**: Records the timestamps of the last few packets received from each IP in a circular buffer (`patterns`), allowing for pattern analysis over time.
+
+- **Dynamic Adjustment of Thresholds**: Allows for potential dynamic adjustments to the thresholds for packet counts, enabling customization based on traffic patterns.
+
+- **Efficient Memory Usage**: Utilizes BPF maps to efficiently store and retrieve statistics, optimizing memory usage for a large number of IPs.
+
+- **Protocol Handling**: Supports both TCP and UDP protocols, ensuring comprehensive monitoring and filtering for a wide range of traffic types.
+
+- **Non-Intrusive Filtering**: Uses XDP for dropping packets at the lowest possible layer, minimizing the impact on server performance and latency.
+
+- **Time-Based Blocking Logic**: Implements a blocking time for IPs that exceed thresholds, which helps prevent temporary spikes in traffic from permanently blocking legitimate users.
+
+- **Logging of Last Packet Time**: Tracks the last packet time for each IP, which aids in detecting rapid-fire attacks or abuse patterns.
+
+- **Low-Level Network Interaction**: Operates at the network interface level, which allows for capturing and processing packets before they reach the kernel networking stack.
+
+- **Customizable Blocking Duration**: The blocking duration can be adjusted through the `BLOCK_TIME` constant, allowing for flexibility in how long an IP should be blocked.
+
+- **Basic Rate Limiting**: Includes basic rate limiting mechanisms by blocking IPs that send packets too frequently, helping to mitigate DDoS attacks.
+
+- **Integration Potential**: The architecture allows for potential integration with other security systems or logging mechanisms for enhanced monitoring.
+
+- **Open Source**: The code is open-source under the MIT License, encouraging collaboration and contributions from the community.
+
+- **Modular Design**: Designed in a modular fashion, making it easy to extend functionality or integrate additional features in the future.
+
 
 ## Planned Features and Future Updates
 
 In future updates, we aim to implement the following features:
 
 - **Advanced Traffic Analysis**: Incorporate more sophisticated algorithms to analyze traffic patterns and detect unusual behavior.
+
 - **Dynamic Thresholds**: Allow thresholds for blocking to be dynamically adjusted based on server load and traffic patterns.
+
 - **Whitelist/Blacklist Management**: Implement functionality to manage whitelists and blacklists for IP addresses.
+
 - **Real-time Monitoring**: Provide real-time statistics and logs for incoming traffic and blocked requests.
+
 - **Integration with Third-party Tools**: Allow integration with other security tools and dashboards for enhanced monitoring capabilities.
+
 - **User-configurable Options**: Enable users to configure various parameters, such as blocking times, thresholds, and more, through a simple interface.
+
+- **Automated Incident Response**: Develop features that automate responses to detected threats, such as notifying administrators or adjusting security settings in real time.
+
+- **User Role Management**: Introduce role-based access controls to allow different levels of access and functionality for various users.
+
+- **Machine Learning Integration**: Implement machine learning algorithms to improve detection capabilities and adapt to new types of attacks over time.
+
+- **Data Export Options**: Provide options to export logs and statistics in various formats (e.g., CSV, JSON) for further analysis or reporting.
+
+- **Custom Alerts and Notifications**: Allow users to set up custom alerts for specific events or thresholds, providing immediate notifications via email or messaging platforms.
+
+- **API for Developers**: Develop an API that allows developers to integrate the DDoS protection features into their own applications or scripts.
+
+- **Improved Documentation**: Continuously enhance the documentation with examples, best practices, and troubleshooting guides to assist users.
+
+- **Load Testing Features**: Add functionality to simulate DDoS attacks in a controlled manner for testing the system's defenses and effectiveness.
+
+- **Enhanced Bot Detection**: Further improve bot detection mechanisms using behavioral analysis and reputation-based systems.
+
+- **Geolocation-based Blocking**: Implement geolocation features to block or allow traffic from specific regions based on user preferences.
+
+- **Graphical User Interface (GUI)**: Develop a user-friendly GUI to manage and visualize the settings and statistics of the DDoS protection system.
+
+- **Regular Security Audits**: Establish a process for regular security audits and updates to ensure the system remains resilient against new threats.
+
 
 ## Requirements
 
