@@ -98,7 +98,7 @@ clang -O2 -target bpf -c minecraft.c -o minecraft.o
 ```
 
 
-### Additional Notes
+## Additional Notes
 
 This version of the Minecraft DDoS Protection project is currently in the development phase. We want to ensure that users have clear expectations regarding the project's functionality and stability. 
 
