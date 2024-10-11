@@ -48,6 +48,4 @@ clang -O2 -target bpf -c minecraft.c -o minecraft.o
 
 ### Additional Notes
 - This version emphasizes the project's developmental stage, sets expectations for users, and provides a clear outline of potential future features, which can encourage community involvement and contributions.
-- Remember to replace `yourusername` in the clone command with your actual GitHub username.
-
   
