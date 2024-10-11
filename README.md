@@ -30,7 +30,7 @@ This repository contains a BPF program designed to protect Minecraft servers fro
 
 - **Integration Potential**: The architecture allows for potential integration with other security systems or logging mechanisms for enhanced monitoring.
 
-- **Open Source**: The code is open-source under the MIT License, encouraging collaboration and contributions from the community.
+- **Open Source**: The code is open-source under the [GNU GPLv3](LICENSE), encouraging collaboration and contributions from the community.
 
 - **Modular Design**: Designed in a modular fashion, making it easy to extend functionality or integrate additional features in the future.
 
