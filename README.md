@@ -68,7 +68,7 @@ This version of the Minecraft DDoS Protection project is currently in the develo
 
 - **Customization**: The program is designed to be flexible and customizable. Users can modify the threshold values and other parameters according to their specific needs. We encourage users to share their configurations and use cases to help others optimize their setups.
 
-- **License and Contributions**: This project is open source and distributed under the [MIT License](LICENSE). Feel free to fork the repository and propose changes. Please follow the guidelines in our CONTRIBUTING.md file for a smooth contribution process.
+- **License and Contributions**: This project is open source and distributed under the [GNU GPLv3](LICENSE). Feel free to fork the repository and propose changes. Please follow the guidelines in our CONTRIBUTING.md file for a smooth contribution process.
 
 - **Roadmap and Milestones**: We plan to publish a roadmap that outlines our future milestones and feature releases. Keeping users informed about upcoming changes will help set expectations and foster transparency.
 
