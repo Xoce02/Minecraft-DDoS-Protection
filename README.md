@@ -4,7 +4,7 @@ This repository contains a BPF program designed to protect Minecraft servers fro
 
 ## ⚠️Development Status
 
-**⚠️Please note that this project is currently under development.** The initial version may not function as expected, and we appreciate your understanding as we work to enhance its stability and features. Your feedback is valuable, and contributions are welcome as we improve the functionality.
+**Please note that this project is currently under development.** The initial version may not function as expected, and we appreciate your understanding as we work to enhance its stability and features. Your feedback is valuable, and contributions are welcome as we improve the functionality.
 
 ## Features
 
