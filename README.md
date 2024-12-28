@@ -86,7 +86,7 @@ In future updates, we aim to implement the following features:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Minecraft-DDoS-Protection.git
+   git clone https://github.com/Xoce02/Minecraft-DDoS-Protection.git
    cd Minecraft-DDoS-Protection
    ```
 ## Compile the BPF Program
